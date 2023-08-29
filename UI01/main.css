@@ -53,11 +53,11 @@ li a {
 }
 
 li a:hover {
-  transform: scale(110%);
+  transform: scale(1.1);
 }
 
 li a:active {
-  transform: scale(70%);
+  transform: scale(0.7);
   color: gold;
 }
 
