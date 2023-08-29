@@ -1,0 +1,23 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  text-align: center;
+}
+
+td {
+  border: 1px solid black;
+  padding: 3px;
+}
+
+th {
+  border: 1px solid black;
+  padding: 3px;
+}
