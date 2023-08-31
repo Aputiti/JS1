@@ -5,7 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LuxE●t</title>
   <link rel="stylesheet" href="main.css">
-</head>
+  <script src="main.js" defer></script>
+  <style>
+    button {
+  display: block;
+  margin-top: 2rem;
+  width: calc(44px * var(--ratio));
+  height: 44px;
+  border-radius: calc(3px * var(--ratio));
+  border: none;
+  letter-spacing: ccalc(3 * var(--leading, 0.025em));
+  font-family: inherit;
+  color: var(--grey-color);
+  background-color: var(--light-color-bg);
+  font-size: large;
+  font-weight: 700;
+}
+
+button:focus {
+  outline: none;
+  border: 0.0625rem solid transparent;
+  box-shadow: 0 0 0 0.125rem #fff, 0 0 0 0.2rem var(--dark-color-bg);
+}
+
+button.cta {
+  background-color: var(--cta-color);
+  color: white;
+}
+
+button.cta:focus {
+  box-shadow: 0 0 0 0.125rem #fff, 0 0 0 0.2rem var(--cta-color);
+}
+
+#open_dialog {
+  margin: 0 auto;
+}
+
+dialog {
+  border: none !important;
+  border-radius: calc(5px * var(--ratio));
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 1.6rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+dialog img {
+  display: block;
+  max-width: 75%;
+  margin: 1rem 0 auto 2rem;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(3px);
+}
+
+.h1 {
+  margin: 2rem 0 1rem;
+  font-weight: 900;
+}
+
+.h2 {
+  margin: 2rem 0 1rem;
+  font-weight: 800;
+}
+
+dialog p {
+  color: var(--grey-color);
+  letter-spacing: var(--leading, 0.025em);
+  line-height: 1.625;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex.flex-space-between {
+  justify-content: space-between;
+}
+
+.flex button {
+  margin: 8px auto;
+}
+
+  </style>
 <body>
   <nav>
     <ul>
@@ -18,6 +102,56 @@
   </nav>
   <main>
     <div class="mainContent">More content coming soon!</div>
+
+
+    <button id="open_dialog">Open Dialog</button>
+
+    <dialog aria-labelledby="dialog_title" aria-describedby="dialog_description">
+      <img src="https://native-dialog.surge.sh/location-service.svg" alt="Illustration of Location Services" />
+      <h2 id="dialog_title" class="h2">Use location services?</h2>
+      <p id="dialog_description">
+        Please fill out the form.
+      </p>
+
+      <!-- dialog form here -->
+      <style>
+        .myForm {
+          margin: 30px;
+        }
+
+        .myForm input {
+          margin: 30px;
+          padding: 10px;
+        }
+
+        .myForm input:required {
+          background-color: red;
+        }
+
+        .myForm input:invalid {
+          background-color: red;
+        }
+
+        .myForm input:valid {
+          background-color: green;
+        }
+      </style>
+
+      <form class="myForm" method="get">
+        <label for="name">Enter your name (minimum 3 characters): </label>
+        <input type="text" name="username" autocomplete="name" id="namebox" placeholder="Your name" minlength="3"  required/>
+        <label for="pwd">Enter your password: </label>
+        <input type="password" name="pass" id="passbox" placeholder="Password"/>
+        <input type="submit" value="Send!" />
+      </form>
+
+      <div class="flex flex-space-between">
+        <button id="close_dialog">Close</button>
+        <button id="confirm_dialog" class="cta">Confirm</button>
+      </div>
+    </dialog>
+
+
     <div class="bottomContent">
       <img src="images/restaurantBottomImg.jpeg" alt="restaurantBottomImg" class="bottomImg">
       <div class="bottomText">
