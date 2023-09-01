@@ -24,3 +24,30 @@ td {
   border-bottom: 1px solid #ccc;
   padding: 0.5em 1em;
 }
+
+.highlight {
+  font-weight: bold;
+  background-color: darksalmon;
+}
+
+dialog {
+  border: 8px darksalmon solid;
+  border-radius: 108px 81px 54px 27px/27px 54px 81px 108px;
+}
+
+p {
+  padding: 5px;
+  border: 5px dashed darksalmon;
+  border-radius: 108px 81px 54px 27px/27px 54px 81px 108px;
+}
+
+span {
+  font-weight: bold;
+}
+
+#exit {
+  background-color: rgba(233, 150, 122, 0.5);
+  border: 5px dashed black;
+  text-align: center;
+  font-weight: bold;
+}

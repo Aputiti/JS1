@@ -771,3 +771,59 @@ const restaurants = [
 ];
 
 // your code here
+
+restaurants.sort(function (a, b) {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+});
+
+const target = document.querySelector('table');
+const dialog = document.querySelector('dialog');
+const rName = document.getElementById('name');
+const address = document.getElementById('address');
+const postal = document.getElementById('postal');
+const city = document.getElementById('city');
+const number = document.getElementById('number');
+const company = document.getElementById('company');
+
+for (loc of restaurants) {
+  const tr = document.createElement('tr');
+  const th1 = document.createElement('th');
+  const th2 = document.createElement('th');
+
+  th1.innerText = loc.name;
+  th2.innerText = loc.address;
+
+  tr.appendChild(th1);
+  tr.appendChild(th2);
+  target.appendChild(tr);
+
+  const locName = loc.name;
+  const locAddress = loc.address;
+  const locPostal = loc.postalCode;
+  const locCity = loc.city;
+  const locNumber = loc.phone;
+  const locCompany = loc.company;
+
+  th1.addEventListener('click', function () {
+    th1.classList.add('highlight');
+    rName.innerHTML = `<span>Restaurant name:</span> ${locName}`;
+    address.innerHTML = `<span>Address: </span> ${locAddress}`;
+    postal.innerHTML = `<span>Postal code: </span> ${locPostal}`;
+    city.innerHTML = `<span>City: </span> ${locCity}`;
+    number.innerHTML = `<span>Phone number: </span> ${locNumber}`;
+    company.innerHTML = `<span>Company: </span> ${locCompany}`;
+    dialog.showModal();
+  });
+}
+
+dialog.addEventListener('close', function () {
+  document.querySelectorAll('table th:first-child').forEach(part => {
+    part.classList.remove('highlight');
+  });
+});
