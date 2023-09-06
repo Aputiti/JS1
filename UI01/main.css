@@ -4,19 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font: 15px "Gill Sans", sans-serif;
-  color: #333333;
-  overflow-x: hidden;
-  /* position: relative; */
-  /* min-height: 100vh; */
-  /* font: 15px "Didot", serif; */
-}
-
-body:has(dialog[open]) {
-  overflow-y: hidden;
-}
-
 :root {
   /* For the webpage */
   --white: #FFFFFFff;
@@ -32,6 +19,171 @@ body:has(dialog[open]) {
   --dark-color-bg: rgb(55, 65, 81);
   --grey-color: rgb(107, 114, 128);
   --leading: 0.025em;
+}
+
+body {
+  font: 15px "Gill Sans", sans-serif;
+  color: #333333;
+  overflow-x: hidden;
+  /* position: relative; */
+  /* min-height: 100vh; */
+  /* font: 15px "Didot", serif; */
+}
+
+body:has(dialog[open]) {
+  overflow-y: hidden;
+}
+
+dialog {
+  border: 5px dotted var(--dark);
+  border-radius: 10px 100px / 120px;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 1.6rem;
+  max-width: 400px;
+  margin: auto;
+  background-color: rgb(246, 246, 246);
+}
+
+dialog img {
+  display: block;
+  max-width: 75%;
+  margin: auto;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(2px);
+}
+
+.h1 {
+  margin: 2rem 0 1rem;
+  font-weight: 900;
+}
+
+.h2 {
+  margin: 2rem 3rem 1rem;
+  color: var(--dark);
+  /* font-weight: 800; */
+}
+
+.dialogDesc {
+  color: var(--khaki);
+}
+
+dialog p {
+  color: var(--grey-color);
+  letter-spacing: var(--leading, 0.025em);
+  line-height: 1.625;
+  margin: 1rem 3rem 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex.flex-space-between {
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.flex button {
+  margin: 8px auto;
+}
+
+.crownIcon {
+  transition: 0.3s transform ease-out;
+}
+
+.crownIcon:hover {
+  transform: rotate(0.05turn) scale(1.05);
+}
+
+.myForm {
+  margin: 20px;
+}
+
+.myForm input {
+  margin: 10px;
+  margin-left: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: hsla(39, 77%, 83%, 0.4);
+  transition: 0.3s all ease;
+  border: 3px dotted var(--dark);
+  outline: none;
+}
+
+.myForm input:focus {
+  background-color: var(--beige);
+}
+
+.myForm label {
+  margin-left: 28px;
+}
+
+.myForm input:invalid {
+  border-color: rgb(219, 37, 37);
+}
+
+.myForm input:valid {
+  border-color: rgb(27, 174, 27);
+  background-color: var(--beige);
+}
+
+.myForm input:hover {
+  transform: scale(1.03);
+}
+
+.myForm button {
+  transition: 0.3s all ease;
+}
+
+.myForm button:hover {
+  transform: scale(1.03);
+}
+
+button {
+  display: block;
+  margin-top: 2rem;
+  width: calc(44px * var(--ratio));
+  height: 44px;
+  border-radius: calc(3px * var(--ratio));
+  border: none;
+  letter-spacing: ccalc(3 * var(--leading, 0.025em));
+  font-family: inherit;
+  color: var(--grey-color);
+  background-color: var(--light-color-bg);
+  font-size: large;
+  /* font-weight: 700; */
+}
+
+button:focus {
+  outline: none;
+  border: 0.0625rem solid transparent;
+  box-shadow: 0 0 0 0.125rem #fff, 0 0 0 0.2rem var(--dark-color-bg);
+}
+
+button.cta {
+  background-color: var(--cta-color);
+  color: white;
+}
+
+button.cta:focus {
+  box-shadow: 0 0 0 0.125rem #fff, 0 0 0 0.2rem var(--cta-color);
+}
+
+.closeButton {
+  width: 100px;
+  background-color: var(--beige);
+  color: var(--dark);
+  border: 3px dotted var(--dark);
+}
+
+.confirmButton {
+  width: 100px;
+  background-color: var(--beige);
+  color: var(--dark);
+  border: 3px dotted var(--dark);
 }
 
 nav {
