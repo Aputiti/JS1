@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuxE●t</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js" defer></script>
+<body>
+  <nav>
+    <ul>
+      <li class="liLogo"><a href="">LuxE<span class="dotEdit">●</span>t</a></li>
+      <li class="liMain"><a href="">About us</a></li>
+      <li class="liMain"><a href="">Contact</a></li>
+      <li class="liMain"><a href="">Food</a></li>
+      <li class="liMain"><a href="">Home</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div id="open_dialog" class="mainContent">More content coming soon! / Open dialog</div>
+    <dialog aria-labelledby="dialog_title" aria-describedby="dialog_description">
+      <img src="images/crownIcon.png" alt="Illustration of Location Services" class="crownIcon"/>
+      <h2 id="dialog_title" class="h2">Sign up now!</h2>
+      <p id="dialog_description">Please fill out the form to sign up.</p>
+      <form class="myForm" method="get">
+        <label for="name">Enter your name (min. 3 characters):</label>
+        <input type="text" name="username" autocomplete="name" id="namebox" placeholder="Your name" minlength="3"  required/>
+        <br>
+        <label for="name">Enter your email (@metropolia.fi):</label>
+        <input type="email" name="email" id="emailbox" placeholder="@metropolia.fi" pattern=".+@metropolia\.fi"  required/>
+        <br>
+        <label for="pwd">Enter your password:</label>
+        <input type="password" name="pwd" id="passbox" placeholder="Incl. 1 capital + 1 num." pattern="^(?=.*[A-Z])(?=.*[0-9]).+$" required/>
+        <div class="flex flex-space-between">
+          <button id="close_dialog" class="closeButton">Close</button>
+          <button type="submit" id="confirm_dialog" class="confirmButton">Confirm</button>
+        </div>
+      </form>
+    </dialog>
+    <div class="bottomContent">
+      <img src="images/restaurantBottomImg.jpeg" alt="restaurantBottomImg" class="bottomImg">
+      <div class="bottomText">
+        <p class="bottomText1">About us</p>
+        <p class="bottomText2">Our story ●</p>
+        <p class="bottomText3">LuxE●t was established by a group of three culinary students that were annoyed by the
+          lack of luxury-style restaurants providing simple but excellent eat-in/takeout food.
+          LuxE●t aims to fill this empty hellhole in the market and serve the people delicious
+          uxury-style food for a reasonable price. &#129294;</p>
+        <img src="images/luxFoodLogo.png" alt="luxuryBottomImg" class="bottomImgLogo">
+      </div>
+    </div>
+  </main>
+  <footer>&copy;&nbsp;2023 Abdur Abouramadan</footer>
+</body>
+</html>

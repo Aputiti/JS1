@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html {
+  background: url(images/restaurantBottomImg.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  /* background-color: lightgreen; */
+  color: red;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    /* background-color: lightblue; */
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  p {
+    background-color: red;
+    margin: auto;
+  }
+}
+
+#pic {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: auto;
+}
+
+#pic-object {
+  width: 500px;
+  height: 100px;
+  object-fit: cover;
+  background-color: rebeccapurple;
+}
+
+#bgimg {
+  width: 50%;
+  height: 500px;
+  background-color: red;
+  margin-bottom: 50px;
+  background-image: url(images/crownIcon.png);
+  background-repeat: none;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media screen and (min-width: 600px) {
+  #bgimg {
+    background-image: url(images/luxFoodLogo.png);
+  }
+}
+
+</style>
+</head>
+<body>
+  <main>
+    <h1>sdkjhsfkdjh djdskh dsjfhsd jkfh d</h1>
+
+<p>Resize the browser window. When the width of this document is 600 pixels or less, the background-color is "lightblue", otherwise it is "lightgreen".</p>
+
+<h2>ksdjfd</h2>
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum vero facilis rem. Reiciendis eaque, ea ducimus maiores repellat expedita temporibus quam, nemo voluptates iusto similique ad optio odit illum dolorem!</p>
+
+<h3>Keskitetty ja margin auto kuvalla max width</h3>
+<img src="images/beige3.jpeg" alt="pic" id="pic" />
+
+<h3>Object fit</h3>
+<img src="images/beige3.jpeg" alt="pic" id="pic-object" />
+
+  </main>
+
+  <h3>Background image</h3>
+<div id="bgimg"></div>
+
+<div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi asperiores dignissimos incidunt corporis soluta nam repellendus officiis harum animi dolore mollitia, nihil, deleniti magnam alias aliquam reprehenderit quisquam, ipsa quae.</div>
+</body>
+</html>
