@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('Oswald.ttf');
+}
+
+body {
+    font-family: 'Oswald';
+    background: url("bg1.jpeg") repeat;
+}
+
+/* Make content area fill the entire browser window */
+html, .fullscreen {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+  
+/* Center the content in the browser window */
+.container {
+    margin: auto;
+    text-align: center;
+}
+  
+.title {
+    font-size: 4rem;
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+p {
+    font-size: 1.5rem;
+    background-color: rgba(128, 128, 128, 0.7);
+}
