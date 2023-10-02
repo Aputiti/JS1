@@ -1,0 +1,338 @@
+:root {
+  /* For center */
+  --dark: #333;
+  --hover: rgb(187, 187, 187);
+}
+
+.main {
+  width: 85%;
+  margin: auto;
+  min-height: calc(100vh - 87px);
+  position: relative;
+}
+
+.mainTop {
+  width: 100%;
+  height: 25rem;
+  background-color: red;
+  margin-bottom: 3rem;
+  background-image: url('../images/banner.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: saturate(0.5) contrast(1.1);
+  border-radius: 0 0 1rem 1rem;
+  border: 0.7px solid #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainTopLogo {
+  color: var(--dark);
+  font-size: 4rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.mainTopText {
+  color: var(--dark);
+  font-weight: 600;
+  font-style: italic;
+  width: 70%;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainCenterTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px ;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.centerTopText {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.centerTopItems {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+}
+
+.ct-item {
+  padding: 0.75rem 1.25rem 0.75rem 1.25rem;
+  border: 1.5px solid black;
+  margin: 0 0.5rem 0 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: white;
+  text-align: center;
+  transition: 0.2s all ease;
+}
+
+.ct-item:hover {
+  background-color: var(--hover);
+}
+
+.mainCenterBottom {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+}
+
+.grid-item1 {
+  border: 0.7px solid #333;
+  border-radius: 1rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../images/marbletexture.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.grid-item2 {
+  border: 0.7px solid #333;
+  border-radius: 1rem;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../images/marbletexture.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.grid-item3 {
+  border: 0.7px solid #333;
+  border-radius: 1rem;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../images/marbletexture.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.grid-item4 {
+  border: 0.7px solid #333;
+  border-radius: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../images/marbletexture.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mainCenterBottom .foodTitle {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mainCenterBottom img {
+  width: 75%;
+  height: auto;
+  border-radius: 1rem;
+  border: 0.7px solid #333;
+}
+
+.mainCenterBottom .foodDesc {
+  margin-top: 1rem;
+  word-wrap: break-word;
+  width: 75%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.orderBtn {
+  border: 1.5px solid black;
+  border-radius: 1rem;
+  padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: 0.2s all ease;
+}
+
+.orderBtn:hover {
+  background-color: var(--hover);
+}
+
+.mainBottom {
+  width: 100%;
+  height: 20rem;
+  bottom: 4rem;
+  padding: 1.8rem 0;
+  border-radius: 1rem;
+  border: 0.7px solid #333;
+  margin-top: 4rem;
+  background-image: url('../images/bottomtexture3.avif');
+  background-size: cover;
+}
+
+.mainBottomImage {
+  width: 350px;
+  height: auto;
+  float: left;
+  margin-right: 3rem;
+  margin-left: 1.8rem;
+  filter: saturate(0.5) contrast(0.9);
+  border-radius: 1rem;
+  border: 0.7px solid #333;
+}
+
+.mainBottomText {
+  font-size: 1.5rem;
+  margin-right: 1.8rem;
+  font-style: italic;
+}
+
+.foodIcon {
+  width: 90px;
+  height: auto;
+  position: absolute;
+  right: 3rem;
+  bottom: 17rem;
+}
+
+@media only screen and (max-width: 533px) {
+  .centerTopItems {
+    flex-direction: column;
+    width: 85%;
+    row-gap: 0.5rem;
+  }
+
+  .ct-item {
+    margin: 0;
+    font-size: 3.5vw;
+  }
+
+  .mainBottomText {
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .mainCenterBottom {
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+  }
+
+  .mainCenterBottom .foodTitle {
+    font-weight: 600;
+  }
+
+  .grid-item1 {
+    margin-right: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .grid-item2 {
+    margin-left: 0 !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .grid-item3 {
+    margin-right: 0 !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .grid-item4 {
+    margin-left: 0 !important;
+    margin-top: 0.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 652px) {
+  .mainBottom {
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .mainBottomImage {
+    float: none;
+    width: 200px;
+    margin: 0;
+  }
+
+  .mainBottomText {
+    margin: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1.8rem;
+    /* word-wrap: break-word; */
+  }
+
+  .grid-item1 {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .grid-item2 {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .grid-item3 {
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .grid-item4 {
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .mainCenterBottom .foodDesc {
+    font-size: 10rem;
+  }
+
+  .orderBtn {
+    font-weight: 500;
+    border: 1px solid black;
+  }
+}
+
+@media only screen and (max-width: 1090px) {
+  .mainCenterBottom .foodTitle {
+    font-size: 3vw;
+  }
+
+  .mainCenterBottom .foodDesc {
+    font-size: 2vw;
+  }
+
+  .orderBtn {
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 1411px) {
+  .mainBottomText {
+    font-size: 1.75vw;
+  }
+}

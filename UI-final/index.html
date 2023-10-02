@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.luxEat</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/center.css">
+    <link rel="stylesheet" href="css/dialog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <ul class="topnav" id="myTopnav">
+        <li class="logo">
+          <a href="#">.luxEat</a>
+        </li>
+        <li id="open_dialog" class="logo">
+          <a href="#">
+            <img class="loginIcon" src="images/loginIcon4.png" alt="login icon">
+          </a>
+        </li>
+        <li class="liAbout">
+          <a href="#about">.about</a>
+        </li>
+        <li class="liMenu">
+          <a href="#menu">.menu</a>
+        </li>
+        <li class="liHome">
+          <a href="#home">.home</a>
+        </li>
+        <li>
+          <a href="#" class="expandIcon">
+            <i class="fa fa-bars"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <dialog aria-labelledby="dialog_title" aria-describedby="dialog_description">
+      <img src="images/crownIcon.png" alt="Illustration of Location Services" class="crownIcon">
+      <h2 id="dialog_title" class="h2">Sign up now!</h2>
+      <p id="dialog_description">Please fill out the form to sign up.</p>
+      <form class="myForm" method="get">
+        <label for="namebox">Enter your name (min. 3 characters):</label>
+        <input type="text" name="username" autocomplete="name" id="namebox" placeholder="Your name" minlength="3" required>
+        <br>
+        <label for="emailbox">Enter your email (@metropolia.fi):</label>
+        <input type="email" name="email" autocomplete="email" id="emailbox" placeholder="@metropolia.fi" pattern=".+@metropolia\.fi" required>
+        <br>
+        <label for="passbox">Enter your password:</label>
+        <input type="password" name="pwd" id="passbox" placeholder="Incl. 1 capital + 1 num." pattern="^(?=.*[A-Z])(?=.*[0-9]).+$" required>
+        <div class="flex flex-space-between">
+          <button id="close_dialog" class="closeButton">Close</button>
+          <button type="submit" id="confirm_dialog" class="confirmButton">Confirm</button>
+        </div>
+      </form>
+    </dialog>
+    <div class="main">
+      <div id="home" class="mainTop">
+        <div class="mainTopLogo">.luxEat</div>
+        <div class="mainTopText">sumptuous food - at the tip of your fingers</div>
+      </div>
+      <div id="menu" class="mainCenterTop">
+        <p class="centerTopText">our .menu</p>
+        <div class="centerTopItems">
+          <div class="ct-item">.uno</div>
+          <div class="ct-item">.dos</div>
+          <div class="ct-item">.tres</div>
+          <div class="ct-item">.cuatro</div>
+        </div>
+      </div>
+      <div class="mainCenterBottom">
+        <div class="grid-item1">
+          <p class="foodTitle">.forkful of flavor</p>
+          <img src="images/food1.avif" alt="meal option 1">
+          <p class="foodDesc">/ savory pasta creation with tomato, cheese, on a fork /</p>
+          <div class="orderBtn">order now</div>
+        </div>
+        <div class="grid-item2">
+          <p class="foodTitle">.savory shrimp spectacle</p>
+          <img src="images/food2.webp" alt="meal option 2">
+          <p class="foodDesc">/ fresh shrimp, tomato, and lettuce with a hint of salt /</p>
+          <div class="orderBtn">order now</div>
+        </div>
+        <div class="grid-item3">
+          <p class="foodTitle">.edible flower oasis</p>
+          <img src="images/food3.avif" alt="meal option 3">
+          <p class="foodDesc">/ orangy dessert with edible flowers and cinnamon /</p>
+          <div class="orderBtn">order now</div>
+        </div>
+        <div class="grid-item4">
+          <p class="foodTitle">.choco delight bonanza</p>
+          <img src="images/food4.avif" alt="meal option 4">
+          <p class="foodDesc">/ choco-spice with mouth-watering creamy dots of joy /</p>
+          <div class="orderBtn">order now</div>
+        </div>
+      </div>
+      <div id="about" class="mainBottom">
+        <img class="mainBottomImage" src="images/bottomImg.jpeg" alt="plate of food">
+        <p class="mainBottomText">/ about us / <br>
+          <br>/ our story / <br>
+          <br>/ luxEat was founded by a group of three culinary students who were dissatisfied with the scarcity of upscale restaurants offering simple yet excellent food delivery options. Our mission at luxEat is to fill this gap in the market and provide people with delicious luxury-style food at reasonable prices /
+        </p>
+        <img class="foodIcon" src="images/luxIcon2.png" alt="food icon">
+      </div>
+    </div>
+    <footer>&copy; 2023 Abdur Abouramadan</footer>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+:root {
+  /* For main */
+  --dark: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url('../montserrat.ttf');
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url('../montserrat-italic.ttf');
+  font-style: italic;
+}
+
+html {
+  font-family: montserrat;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ffffff;
+  opacity: 1;
+  background-image:  radial-gradient(#000000a7 1.15px, transparent 1.15px), radial-gradient(#000000a7 1.15px, #ffffff 1.15px);
+  background-size: 46px 46px;
+  background-position: 0 0,23px 23px;
+}
+
+ul {
+  font-size: 1.5rem;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--dark);
+  width: 85%;
+}
+
+.logo {
+  float: left;
+}
+
+li {
+  float: right;
+  transition: 0.2s all ease;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1rem 1.8rem;
+  text-decoration: none;
+}
+
+li a:active {
+  background-color: black;
+}
+
+.expandIcon {
+  display: none;
+}
+
+.loginIcon {
+  width: 15px;
+  height: auto;
+}
+
+ul li:hover {
+  background-color: gray;
+}
+
+footer {
+  height: 2.5rem; /* Set the desired height of your footer */
+  background-color: var(--dark); /* Set a background color for the footer */
+  color: white;
+  text-align: center;
+  line-height: 2.5rem;
+  width: 85%;
+  margin: auto;
+  font-size: 0.8rem;
+  border-radius: 1rem 1rem 0 0;
+  margin-top: 4rem;
+}
+
+@media only screen and (max-width: 721px) {
+  .liHome {
+    display: none;
+  }
+
+  .liMenu {
+    display: none;
+  }
+
+  .liAbout {
+    display: none;
+  }
+
+  .expandIcon {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 721px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .expandIcon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .topnav.responsive .liHome {
+    display: block;
+    float: none;
+  }
+
+  .topnav.responsive .liMenu {
+    display: block;
+    float: none;
+  }
+
+  .topnav.responsive .liAbout {
+    display: block;
+    float: none;
+  }
+
+  .topnav.responsive .liHome a {
+    text-align: right;
+  }
+
+  .topnav.responsive .liMenu a {
+    text-align: right;
+  }
+
+  .topnav.responsive .liAbout a {
+    text-align: right;
+  }
+}
