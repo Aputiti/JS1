@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/app-icon.svg" />
+  <link href="main.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Example Vite PWA">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png" sizes="192x192">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  <script type="module" src="/src/main.ts"></script>
+  <title>Restaurant App</title>
+</head>
+
+<body>
+  <div class="top">
+    <h1>Restaurant App <span class="titlespan">for students</span></h1>
+    <h2>Check out our locations!</h2>
+    <div id="napit">
+      <button id="reset">Show all</button>
+      <button id="sodexo">Sodexo</button>
+      <button id="compass">Compass Group</button>
+    </div>
+  </div>
+
+  <div class="mapcontainer">
+    <p class="maptext2">Please allow location access for the site to work properly!</p>
+    <div id="map"></div>
+    <p class="maptext">Interactive map, click on markers for more info about the restaurant.</p>
+  </div>
+
+  <div class="middle">
+    <div id="mode">
+      <p class="sideText">&lt;-- Farther from you • Closer to you --&gt;</p>
+      <input type="checkbox" id="modebutton" name="modeswitch">
+      <label for="modebutton" id="modetext">Dark Mode</label>
+    </div>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Company</th>
+      </tr>
+      <!-- add restaurants here -->
+    </table>
+  </div>
+
+  <!-- modal -->
+  <dialog>
+    <!-- add restaurant info here when restaurant is clicked -->
+  </dialog>
+</body>
+
+</html>
